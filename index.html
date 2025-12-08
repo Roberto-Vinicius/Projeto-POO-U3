@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plantão VR - p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ordem de carregamento é importante! -->
+    <!-- 1. Configurações globais -->
+    <script src="src/Config.js"></script>
+    
+    <!-- 2. Definições de casos e cenários -->
+    <script src="src/Casos.js"></script>
+    
+    <!-- 3. Classes base (Camera e Hotspot) -->
+    <script src="src/Hotspots.js"></script>
+    
+    <!-- 4. Classe Cenario (depende de Hotspot) -->
+    <script src="src/Cenarios.js"></script>
+    
+    <!-- 5. Gerenciador principal (depende de todas as anteriores) -->
+    <script src="src/Gerenciador.js"></script>
+    
+    <!-- 6. Arquivo principal p5.js (setup, draw, etc) -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
