@@ -1,5 +1,3 @@
-/* global millis, floor, max, push, pop, resetMatrix, background, noFill, strokeWeight, stroke, ellipse, arc, fill, text, rect, textAlign, textSize, width, height, LEFT, TOP, CENTER, prompt, alert, degrees, Date, PI, TWO_PI, constrain */
-
 // ============================================================
 // CLASSE: GERENCIADOR DE JOGO
 // ============================================================
@@ -39,7 +37,6 @@ class GerenciadorDeJogo {
 
   /**
    * Inicializa todos os cenários a partir das definições
-   * @param {Object} defs - Objeto com definições de cenários (do Casos.js)
    */
   inicializarCenarios(defs) {
     for (let nome in defs) {
@@ -51,7 +48,6 @@ class GerenciadorDeJogo {
 
   /**
    * Muda o cenário atual
-   * @param {string} nome - Nome do cenário de destino
    */
   mudarCenario(nome) {
     if (!this.cenarios[nome]) {

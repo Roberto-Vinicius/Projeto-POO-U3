@@ -11,9 +11,6 @@
 class Cenario {
   /**
    * Construtor do cenário
-   * @param {string} nome - Nome identificador do cenário
-   * @param {p5.Image} img - Imagem 360° do cenário
-   * @param {Array} hotspotsDef - Array com definições de hotspots
    */
   constructor(nome, img, hotspotsDef) {
     this.nome = nome;
@@ -30,8 +27,6 @@ class Cenario {
 
   /**
    * Adiciona um hotspot ao cenário a partir de uma definição
-   * @param {Object} def - Definição do hotspot (label, actionType, target, yawDeg, pitchDeg)
-   * @param {number|string} idxOrIdSuffix - Índice ou sufixo para gerar ID único
    */
   addHotspotFromDef(def, idxOrIdSuffix) {
     // Converte ângulos de graus para radianos
@@ -54,7 +49,6 @@ class Cenario {
 
   /**
    * Renderiza o cenário (esfera com textura) e todos os seus hotspots
-   * @param {Camera} cam - Referência da câmera para aplicar transformações
    */
   render(cam) {
     // Renderiza a esfera 360° com a imagem como textura

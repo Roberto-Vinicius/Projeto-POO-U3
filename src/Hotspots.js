@@ -82,10 +82,6 @@ class Hotspot {
 
   /**
    * Converte coordenadas esféricas (yaw, pitch, raio) para cartesianas (x, y, z)
-   * @param {number} yaw - Ângulo horizontal em radianos
-   * @param {number} pitch - Ângulo vertical em radianos
-   * @param {number} r - Raio (distância da origem)
-   * @returns {p5.Vector} Posição cartesiana
    */
   sphericalToCartesian(yaw, pitch, r) {
     const x = -r * Math.sin(yaw) * Math.cos(pitch);
@@ -96,7 +92,6 @@ class Hotspot {
 
   /**
    * Renderiza o hotspot como uma esfera colorida
-   * @param {Camera} cam - Referência da câmera para aplicar transformações
    */
   render(cam) {
     push();
@@ -119,8 +114,6 @@ class Hotspot {
 
   /**
    * Verifica se a câmera está olhando para este hotspot
-   * @param {Camera} cam - Referência da câmera
-   * @returns {boolean} True se está olhando para o hotspot
    */
   isLookedAt(cam) {
     // Função auxiliar para calcular diferença angular circular
